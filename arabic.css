@@ -1,0 +1,87 @@
+/*
+Naif Alfayez
+CSC 337
+Final project: Arabic letters style sheet where the style of the webpage is 
+specified.
+*/
+
+body {
+	background-color: #D3D3D3;
+	font-family: Garamond, serif;
+	margin: 0px;
+}
+
+.biginfo {
+	font-family: Tahoma, Monospace;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+}
+
+#banner {
+	box-shadow: 0 5px 5px black;
+	height: 80px;
+	position: relative;
+
+}
+
+#banner > h1 {
+	font-family: Tahoma, sans-serif;
+	margin: 20px;
+	float: left;
+}
+
+#description {
+	width: 902px;
+	display: inline-block;
+}
+
+#home {
+	background: #E10000;
+	color: black;
+	font-size: 26pt;
+	right: 5%;
+	padding: 5px;
+	position: absolute;
+	top: 20px;
+}
+
+#information {
+	border: 2px solid black;
+	margin-left: auto;
+	margin-right: auto; 
+	text-align: left;
+	width: 900px;
+}
+
+#information > p {
+	border-bottom: 1px dashed black;
+	font-family: Tahoma, Monospace;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 16px;
+	padding: 5px;
+}
+
+#mainpage {
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+}
+
+#mainpage > div > img {
+	float: left;
+	height: auto;
+	max-width: 300px;
+	margin: 10px;
+}
+
+#subpage {
+  text-align: center;
+}
+
+#write {
+	float: left;
+}
+
