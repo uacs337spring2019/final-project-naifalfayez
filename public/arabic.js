@@ -17,7 +17,7 @@ is processed and then passed to the webpage.
 	function homepage () {
 		document.getElementById("mainpage").innerHTML = "";
 		hide();
-		let response  = fetching("http://finalprojectarabic.herokuapp.com/?mode=all&title=");
+		let response  = fetching("http://finalprojectarabic.herokuapp.com");
 		response.then(function(responseText) {
 			response  = JSON.parse(responseText);
 			
