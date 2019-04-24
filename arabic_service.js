@@ -48,7 +48,8 @@ app.get('/', function (req, res) {
 
 	let mode = req.query.mode;
 	let title = req.query.title;
-	
+	console.log(mode);
+	console.log(title);
 	// returns an error if one of the parameters is missing
 	if(mode == undefined || title == undefined) {
 		res.status(400);
