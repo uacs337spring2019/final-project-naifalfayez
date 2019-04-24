@@ -1,5 +1,5 @@
 {
-  "name": "Arabic Letters",
+  "name": "arabicletters",
   "version": "1.0.0",
   "description": "webpage that shows the Arabic Letters",
   "main": "arabic_service.js",
