@@ -104,7 +104,7 @@ function info (title) {
 * @returns {Object} letters
 */
 function letters () {
-	let files = fs.readdirSync("letters/");
+	let files = fs.readdirSync("public/letters/");
 	let letters = [];
 	for (let i = 1; i < files.length; i++) {
 		
