@@ -17,7 +17,7 @@ is processed and then passed to the webpage.
 	function homepage () {
 		document.getElementById("mainpage").innerHTML = "";
 		hide();
-		let response  = fetching("http://finalprojectarabic.herokuapp.com");
+		let response  = fetching("https://finalprojectarabic.herokuapp.com/?mode=all&title=");
 		response.then(function(responseText) {
 			response  = JSON.parse(responseText);
 			
@@ -86,7 +86,7 @@ is processed and then passed to the webpage.
 	function comments(folder) {
 		let section = document.getElementById("information");
 		section.innerHTML = "";
-		let response  = fetching("http://finalprojectarabic.herokuapp.com/?mode=info&title="+folder);
+		let response  = fetching("https://finalprojectarabic.herokuapp.com/?mode=info&title="+folder);
 		response.then(function(responseText) {
 			response  = JSON.parse(responseText);
 			
@@ -103,7 +103,7 @@ is processed and then passed to the webpage.
 	* @param {String} folder of the letter
 	*/
 	function description(folder) {
-		let response  = fetching("http://finalprojectarabic.herokuapp.com/?mode=description&title="+folder);
+		let response  = fetching("https://finalprojectarabic.herokuapp.com/?mode=description&title="+folder);
 		response.then(function(responseText) {
 			response  = JSON.parse(responseText);
 
@@ -154,7 +154,7 @@ is processed and then passed to the webpage.
 			comment.innerHTML = text;
 			document.getElementById("information").appendChild(comment);
 
-			fetch("http://finalprojectarabic.herokuapp.com/?mode=post&title="+num, fetchOptions)
+			fetch("https://finalprojectarabic.herokuapp.com/?mode=post&title="+num, fetchOptions)
 				.then(checkStatus)
 				.then(function(responseText) {
 					console.log(responseText);
