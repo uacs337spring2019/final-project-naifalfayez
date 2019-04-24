@@ -33,7 +33,7 @@ app.post('/', jsonParser, function (req, res) {
 	let line = comment+"\n";
 	
 
-	fs.appendFile("letters/"+folder+"/info.txt", line , function(err) {
+	fs.appendFile("public/letters/"+folder+"/info.txt", line , function(err) {
 		if(err) {
 			console.log(err);
 			res.status(400);
@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 * @returns {Object} messages
 */ 
 function info (title) {
-	let file = fs.readFileSync("letters/"+title+"/info.txt", 'utf8');
+	let file = fs.readFileSync("public/letters/"+title+"/info.txt", 'utf8');
 	let lines = file.split("\n");
 	let messages = [];
 	for (let i = 0; i < lines.length; i++) {
@@ -108,7 +108,7 @@ function letters () {
 	let letters = [];
 	for (let i = 1; i < files.length; i++) {
 		
-		let file = fs.readFileSync("letters/"+i+"/description.txt", 'utf8');
+		let file = fs.readFileSync("public/letters/"+i+"/description.txt", 'utf8');
 		let lines = file.split("\n");
 		
 		let letter = {
@@ -127,7 +127,7 @@ function letters () {
 * @returns {Object} info
 */
 function description(title) {
-	let file = fs.readFileSync("letters/"+title+"/description.txt", 'utf8');
+	let file = fs.readFileSync("public/letters/"+title+"/description.txt", 'utf8');
 	let lines = file.split("\n");
 	let info = {
 		"number":lines[0].trim(),
